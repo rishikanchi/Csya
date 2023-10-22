@@ -1,5 +1,4 @@
-https://prod.liveshare.vsengsaas.visualstudio.com/join?09EF292B7A2BF6BF753DA4D41CB2668952E0  
-
+https://prod.liveshare.vsengsaas.visualstudio.com/join?CFF537092FFFA5229EF49F16459E132A11BD
 
 yarn add react-native-calendars
 
