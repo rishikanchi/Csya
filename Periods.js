@@ -2,7 +2,7 @@ import Period from "./Period.js";
 import { Component } from "react";
 import { View, Text, Dimensions, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 
-export default function Periods({route}){
+export default function Periods({route, navigation}){
     return (
         <View style={periodsStyles.pageCont}>
             <View style={periodsStyles.dateCont}>
@@ -10,15 +10,15 @@ export default function Periods({route}){
             </View>
             {/**route.params.date*/}
             <ScrollView style={periodsStyles.periodsCont}>
-                <Period titleText = "English" index = {1}/>
+                <Period titleText = "English" index = {1} navigation = {navigation}/>
                 <View style = {{height: 10}}></View>
-                <Period titleText = "Spanish"  index = {2}/>
+                <Period titleText = "Spanish"  index = {2} navigation = {navigation}/>
                 <View style = {{height: 10}}></View>
-                <Period titleText = "Math" index = {3}/>
+                <Period titleText = "Math" index = {3} navigation = {navigation}/>
                 <View style = {{height: 10}}></View>
-                <Period titleText = "History" index = {4}/>
+                <Period titleText = "History" index = {4} navigation = {navigation}/>
                 <View style = {{height: 10}}></View>
-                <Period titleText = "Science" index = {5}/>
+                <Period titleText = "Science" index = {5} navigation = {navigation}/>
                 <View style = {{height: 100}}></View>
             </ScrollView>
         </View>

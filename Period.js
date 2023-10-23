@@ -1,7 +1,31 @@
 import { Component } from "react";
+import React from 'react';
+//import {Button } from 'react-native';
+//import Share from 'react-native-share';
 import { View, Text, Dimensions, StyleSheet, TouchableOpacity } from "react-native";
+
 export default class Period extends Component{
+
     render(){
+      //function downloadFile (){
+      //  const fileURL = 'https://web.fscj.edu/Milczanowski/psc/quiz2.pdf'; // Replace with the actual file URL
+      //  const fileType = 'application/pdf'; // Replace with the correct MIME type
+    //
+      //  // Use RNFetchBlob to download the file
+      //  RNFetchBlob.config({
+      //    fileCache: true,
+      //    appendExt: fileType.split('/')[1], // File extension based on MIME type
+      //  })
+      //    .fetch('GET', fileURL)
+      //    .then((res) => {
+      //      console.log(res)
+      //      // Use react-native-share to prompt the user to save or open the downloaded file
+      //      Share.open({ url: `file://${res.path()}`, type: fileType });
+      //    })
+      //    .catch((error) => {
+      //      console.error('File download error:', error);
+      //    });
+      //};
         return(
             <View style = {styles.cont}>
                 <View style = {styles.header}>
@@ -10,18 +34,18 @@ export default class Period extends Component{
                 </View>
                 <View style = {styles.filesCont}>
                   <View style = {styles.rowElem}>
-                    <TouchableOpacity style = {styles.link}>
+                    <TouchableOpacity style = {styles.link} onPress={() => this.props.navigation.navigate('pdfedit')}>
                       <Text style = {styles.filesText}>Homework</Text>
                     </TouchableOpacity>
-                      <TouchableOpacity style = {styles.link}>
+                      <TouchableOpacity style = {styles.link} onPress={() => this.props.navigation.navigate('pdfedit')}>
                       <Text style = {styles.filesText}>Notes</Text>
                     </TouchableOpacity>
                     </View>
                   <View style = {styles.rowElem}>
-                    <TouchableOpacity style = {styles.link}>
+                    <TouchableOpacity style = {styles.link} onPress={() => this.props.navigation.navigate('pdfedit')}>
                       <Text style = {styles.filesText}>Lesson Plans</Text>
                     </TouchableOpacity>
-                      <TouchableOpacity style = {styles.link}>
+                      <TouchableOpacity style = {styles.link} onPress={() => this.props.navigation.navigate('pdfedit')}>
                       <Text style = {styles.filesText}>Lectures</Text>
                     </TouchableOpacity>
                   </View>

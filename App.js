@@ -5,6 +5,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import periodPage from './Periods';
 import Overview from './overview';
 import OverviewButton from './components/overviewButton';
+import Periods from "./Periods"
+import Start from './Start';
+import SignUp from './SignUp';
+import DateBox from './DateBox';
+import Login from "./Login";
+import PdfEdit from './PdfEdit';
 
 // export default function App() {
 //   return (
@@ -14,7 +20,7 @@ import OverviewButton from './components/overviewButton';
 //     </View>
 //   );
 // }
-
+ 
 // const styles = StyleSheet.create({
 //   container: {
 //     flex: 1,
@@ -28,9 +34,14 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return(
     <NavigationContainer>
-      <Stack.Navigator initialRouteName = "overview">
-        <Stack.Screen name="class" component={Overview} options={{headerShown: false}}/>
+      <Stack.Navigator initialRouteName = "start">
+        <Stack.Screen name="periods" component={Periods} options={{headerShown: false}}/>
         <Stack.Screen name="overview" component={Overview} options={{headerShown: false}}/>
+        <Stack.Screen name="start" component={Start} options={{headerShown: false}}/>
+        <Stack.Screen name="signup" component={SignUp} options={{headerShown: false}}/>
+        <Stack.Screen name="datebox" component={DateBox} options={{headerShown: false}}/>
+        <Stack.Screen name="login" component={Login} options={{headerShown: false}}/>
+        <Stack.Screen name="pdfedit" component={PdfEdit} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
 )

@@ -1,9 +1,15 @@
 import { Component } from "react";
 import { View, Text, Dimensions, StyleSheet, TouchableOpacity } from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useNavigation } from "@react-navigation/native";
+
 export default class DateBox extends Component {
     render(){
+        console.log(this.props)
         return(
-            <TouchableOpacity style = {styles.cont}>
+            <TouchableOpacity 
+                style = {styles.cont} onPress={() => this.props.navigation.navigate('periods')}>
                 <Text style = {styles.date}>{this.props.dateString}</Text>
                 <View style = {styles.notiCircle}>
                     <Text style = {styles.notis}>{this.props.notis}</Text>

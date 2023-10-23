@@ -104,14 +104,15 @@ class Overview extends Component {
                 textDisabledColor: 'lightgray',
               }}
             />
+            <Text style = {styles.weekOf}>Week of {this.state.dateStrings[0].split(', ')[1]} - {this.state.dateStrings[6].split(', ')[1]}</Text> 
             <ScrollView contentContainerStyle={styles.datesCont} showsVerticalScrollIndicator={false}>
-                <DateBox dateString={this.state.dateStrings[0]} notis={(this.getRandomInt(0, 6)).toString()}/>
-                <DateBox dateString={this.state.dateStrings[1]} notis={(this.getRandomInt(0, 6)).toString()}/>
-                <DateBox dateString={this.state.dateStrings[2]} notis={(this.getRandomInt(0, 6)).toString()}/>
-                <DateBox dateString={this.state.dateStrings[3]} notis={(this.getRandomInt(0, 6)).toString()}/>
-                <DateBox dateString={this.state.dateStrings[4]} notis={(this.getRandomInt(0, 6)).toString()}/>
-                <DateBox dateString={this.state.dateStrings[5]} notis={(this.getRandomInt(0, 6)).toString()}/>
-                <DateBox dateString={this.state.dateStrings[6]} notis={(this.getRandomInt(0, 6)).toString()}/>
+                <DateBox dateString={this.state.dateStrings[0]} notis={(this.getRandomInt(0, 6)).toString()} navigation = {this.props.navigation}/>
+                <DateBox dateString={this.state.dateStrings[1]} notis={(this.getRandomInt(0, 6)).toString()} navigation = {this.props.navigation}/>
+                <DateBox dateString={this.state.dateStrings[2]} notis={(this.getRandomInt(0, 6)).toString()} navigation = {this.props.navigation}/>
+                <DateBox dateString={this.state.dateStrings[3]} notis={(this.getRandomInt(0, 6)).toString()} navigation = {this.props.navigation}/>
+                <DateBox dateString={this.state.dateStrings[4]} notis={(this.getRandomInt(0, 6)).toString()} navigation = {this.props.navigation}/>
+                <DateBox dateString={this.state.dateStrings[5]} notis={(this.getRandomInt(0, 6)).toString()} navigation = {this.props.navigation}/>
+                <DateBox dateString={this.state.dateStrings[6]} notis={(this.getRandomInt(0, 6)).toString()} navigation = {this.props.navigation}/>
             </ScrollView>
           </View>
           
@@ -139,6 +140,15 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignContent: 'center',
         alignItems: 'center',
+    },
+    weekOf: {
+        height: '10%',
+        width: '90%',
+        fontSize: 25,
+        color: '#000',
+        fontWeight: '600',
+        textAlign: 'center',
+        top: '3%'
     }
 });
   
